@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 31.626312965506553,
+    "longitude": -7.996275676883051,
+    "pitch": 0,
+    "zoom": 10
+  },
+  "layers": [
+    {
+      "@@type": "ScatterplotLayer",
+      "data": [
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 560,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.982633083999929,
+              31.581789104000052
+            ],
+            "type": "Point"
+          },
+          "lat": 31.581789104000052,
+          "lon": -7.982633083999929
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 573,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.968745096999953,
+              31.610199479000073
+            ],
+            "type": "Point"
+          },
+          "lat": 31.610199479000073,
+          "lon": -7.968745096999953
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 574,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.969109154999956,
+              31.609130192000066
+            ],
+            "type": "Point"
+          },
+          "lat": 31.609130192000066,
+          "lon": -7.969109154999956
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 575,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.965836508999928,
+              31.596311297000057
+            ],
+            "type": "Point"
+          },
+          "lat": 31.596311297000057,
+          "lon": -7.965836508999928
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 576,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.960670483999934,
+              31.601426221000054
+            ],
+            "type": "Point"
+          },
+          "lat": 31.601426221000054,
+          "lon": -7.960670483999934
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 577,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.960524029999931,
+              31.601470499000072
+            ],
+            "type": "Point"
+          },
+          "lat": 31.601470499000072,
+          "lon": -7.960524029999931
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 579,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.959620079999922,
+              31.59538518100004
+            ],
+            "type": "Point"
+          },
+          "lat": 31.59538518100004,
+          "lon": -7.959620079999922
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 580,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.958811591999961,
+              31.595146772000078
+            ],
+            "type": "Point"
+          },
+          "lat": 31.595146772000078,
+          "lon": -7.958811591999961
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 581,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.958784671999922,
+              31.595099606000076
+            ],
+            "type": "Point"
+          },
+          "lat": 31.595099606000076,
+          "lon": -7.958784671999922
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 582,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.95126741699994,
+              31.59396912200009
+            ],
+            "type": "Point"
+          },
+          "lat": 31.59396912200009,
+          "lon": -7.95126741699994
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 583,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.952906691999942,
+              31.59270050400005
+            ],
+            "type": "Point"
+          },
+          "lat": 31.59270050400005,
+          "lon": -7.952906691999942
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 584,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.95260914399995,
+              31.592929938000054
+            ],
+            "type": "Point"
+          },
+          "lat": 31.592929938000054,
+          "lon": -7.95260914399995
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 585,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.963093873999924,
+              31.60626663900007
+            ],
+            "type": "Point"
+          },
+          "lat": 31.60626663900007,
+          "lon": -7.963093873999924
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 586,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.96324031499995,
+              31.606229501000087
+            ],
+            "type": "Point"
+          },
+          "lat": 31.606229501000087,
+          "lon": -7.96324031499995
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 587,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.957797880999919,
+              31.609759601000064
+            ],
+            "type": "Point"
+          },
+          "lat": 31.609759601000064,
+          "lon": -7.957797880999919
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 588,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.994276271999922,
+              31.612667267000063
+            ],
+            "type": "Point"
+          },
+          "lat": 31.612667267000063,
+          "lon": -7.994276271999922
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 589,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.995038232999946,
+              31.61205377600004
+            ],
+            "type": "Point"
+          },
+          "lat": 31.61205377600004,
+          "lon": -7.995038232999946
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 590,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.994766889999937,
+              31.611939428000085
+            ],
+            "type": "Point"
+          },
+          "lat": 31.611939428000085,
+          "lon": -7.994766889999937
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 591,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.994904211999938,
+              31.611689727000055
+            ],
+            "type": "Point"
+          },
+          "lat": 31.611689727000055,
+          "lon": -7.994904211999938
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 592,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.995133130999932,
+              31.61184029900005
+            ],
+            "type": "Point"
+          },
+          "lat": 31.61184029900005,
+          "lon": -7.995133130999932
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 594,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.996502026999906,
+              31.60107438500006
+            ],
+            "type": "Point"
+          },
+          "lat": 31.60107438500006,
+          "lon": -7.996502026999906
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 595,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.989649010999926,
+              31.592336630000034
+            ],
+            "type": "Point"
+          },
+          "lat": 31.592336630000034,
+          "lon": -7.989649010999926
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 596,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.001567878999936,
+              31.597332651000045
+            ],
+            "type": "Point"
+          },
+          "lat": 31.597332651000045,
+          "lon": -8.001567878999936
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 597,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.999899834999951,
+              31.597447299000066
+            ],
+            "type": "Point"
+          },
+          "lat": 31.597447299000066,
+          "lon": -7.999899834999951
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 598,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.99830049499991,
+              31.59512291900006
+            ],
+            "type": "Point"
+          },
+          "lat": 31.59512291900006,
+          "lon": -7.99830049499991
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 599,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.997683643999949,
+              31.595303843000067
+            ],
+            "type": "Point"
+          },
+          "lat": 31.595303843000067,
+          "lon": -7.997683643999949
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 600,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.99806704699995,
+              31.595530454000084
+            ],
+            "type": "Point"
+          },
+          "lat": 31.595530454000084,
+          "lon": -7.99806704699995
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 601,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.995638480999958,
+              31.590408074000038
+            ],
+            "type": "Point"
+          },
+          "lat": 31.590408074000038,
+          "lon": -7.995638480999958
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 602,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.995337393999932,
+              31.59114625400008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.59114625400008,
+          "lon": -7.995337393999932
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 603,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.001153784999929,
+              31.588072691000036
+            ],
+            "type": "Point"
+          },
+          "lat": 31.588072691000036,
+          "lon": -8.001153784999929
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 604,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.005349872999943,
+              31.586675814000046
+            ],
+            "type": "Point"
+          },
+          "lat": 31.586675814000046,
+          "lon": -8.005349872999943
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 605,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.005236995999951,
+              31.586394485000085
+            ],
+            "type": "Point"
+          },
+          "lat": 31.586394485000085,
+          "lon": -8.005236995999951
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 606,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.012343557999941,
+              31.586448989000075
+            ],
+            "type": "Point"
+          },
+          "lat": 31.586448989000075,
+          "lon": -8.012343557999941
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 609,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.011190774999932,
+              31.63097898600006
+            ],
+            "type": "Point"
+          },
+          "lat": 31.63097898600006,
+          "lon": -8.011190774999932
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 610,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -7.990914357999941,
+              31.617161690000046
+            ],
+            "type": "Point"
+          },
+          "lat": 31.617161690000046,
+          "lon": -7.990914357999941
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 611,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.030168548999939,
+              31.631830551000064
+            ],
+            "type": "Point"
+          },
+          "lat": 31.631830551000064,
+          "lon": -8.030168548999939
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 612,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.003928208999923,
+              31.630843603000073
+            ],
+            "type": "Point"
+          },
+          "lat": 31.630843603000073,
+          "lon": -8.003928208999923
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 613,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.00328069099993,
+              31.624814813000057
+            ],
+            "type": "Point"
+          },
+          "lat": 31.624814813000057,
+          "lon": -8.00328069099993
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 614,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.003880600999935,
+              31.634008334000043
+            ],
+            "type": "Point"
+          },
+          "lat": 31.634008334000043,
+          "lon": -8.003880600999935
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 615,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.01048036599991,
+              31.63533623300009
+            ],
+            "type": "Point"
+          },
+          "lat": 31.63533623300009,
+          "lon": -8.01048036599991
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 616,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.010706623999909,
+              31.635485146000065
+            ],
+            "type": "Point"
+          },
+          "lat": 31.635485146000065,
+          "lon": -8.010706623999909
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 617,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.01064338699996,
+              31.635523641000077
+            ],
+            "type": "Point"
+          },
+          "lat": 31.635523641000077,
+          "lon": -8.01064338699996
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 618,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.008723422999935,
+              31.637043109000047
+            ],
+            "type": "Point"
+          },
+          "lat": 31.637043109000047,
+          "lon": -8.008723422999935
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 619,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.00940195599992,
+              31.636706123000067
+            ],
+            "type": "Point"
+          },
+          "lat": 31.636706123000067,
+          "lon": -8.00940195599992
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 620,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.009020135999947,
+              31.643659254000056
+            ],
+            "type": "Point"
+          },
+          "lat": 31.643659254000056,
+          "lon": -8.009020135999947
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 621,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.00895774199995,
+              31.64354066800007
+            ],
+            "type": "Point"
+          },
+          "lat": 31.64354066800007,
+          "lon": -8.00895774199995
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 622,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.014214455999934,
+              31.63730081500006
+            ],
+            "type": "Point"
+          },
+          "lat": 31.63730081500006,
+          "lon": -8.014214455999934
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 623,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.01417209999994,
+              31.63694754900007
+            ],
+            "type": "Point"
+          },
+          "lat": 31.63694754900007,
+          "lon": -8.01417209999994
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 624,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.01438357099994,
+              31.63691194900008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.63691194900008,
+          "lon": -8.01438357099994
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 625,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.016864050999914,
+              31.638935450000076
+            ],
+            "type": "Point"
+          },
+          "lat": 31.638935450000076,
+          "lon": -8.016864050999914
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 626,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.016892645999917,
+              31.639080789000047
+            ],
+            "type": "Point"
+          },
+          "lat": 31.639080789000047,
+          "lon": -8.016892645999917
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 627,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.014030903999924,
+              31.64785303700006
+            ],
+            "type": "Point"
+          },
+          "lat": 31.64785303700006,
+          "lon": -8.014030903999924
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 628,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.014141319999908,
+              31.64796827400005
+            ],
+            "type": "Point"
+          },
+          "lat": 31.64796827400005,
+          "lon": -8.014141319999908
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 629,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.018098789999954,
+              31.64898773500005
+            ],
+            "type": "Point"
+          },
+          "lat": 31.64898773500005,
+          "lon": -8.018098789999954
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 630,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.018127277999952,
+              31.649081944000045
+            ],
+            "type": "Point"
+          },
+          "lat": 31.649081944000045,
+          "lon": -8.018127277999952
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 631,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.008615548999956,
+              31.646611420000056
+            ],
+            "type": "Point"
+          },
+          "lat": 31.646611420000056,
+          "lon": -8.008615548999956
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 632,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.008531931999926,
+              31.64663570500005
+            ],
+            "type": "Point"
+          },
+          "lat": 31.64663570500005,
+          "lon": -8.008531931999926
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 633,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.008692587999917,
+              31.651440311000044
+            ],
+            "type": "Point"
+          },
+          "lat": 31.651440311000044,
+          "lon": -8.008692587999917
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 634,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.011682052999959,
+              31.65618898000008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.65618898000008,
+          "lon": -8.011682052999959
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 635,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.002369848999933,
+              31.65629087500008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.65629087500008,
+          "lon": -8.002369848999933
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 636,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -8.00098784599993,
+              31.635944564000056
+            ],
+            "type": "Point"
+          },
+          "lat": 31.635944564000056,
+          "lon": -8.00098784599993
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 637,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.991561728999955,
+              31.655793823000067
+            ],
+            "type": "Point"
+          },
+          "lat": 31.655793823000067,
+          "lon": -7.991561728999955
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 638,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.991516988999933,
+              31.655699293000055
+            ],
+            "type": "Point"
+          },
+          "lat": 31.655699293000055,
+          "lon": -7.991516988999933
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 639,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.998793425999907,
+              31.661130240000034
+            ],
+            "type": "Point"
+          },
+          "lat": 31.661130240000034,
+          "lon": -7.998793425999907
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 640,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.990258834999906,
+              31.661662770000078
+            ],
+            "type": "Point"
+          },
+          "lat": 31.661662770000078,
+          "lon": -7.990258834999906
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 641,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.99028775499994,
+              31.661525244000075
+            ],
+            "type": "Point"
+          },
+          "lat": 31.661525244000075,
+          "lon": -7.99028775499994
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 642,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.990236301999914,
+              31.661376215000075
+            ],
+            "type": "Point"
+          },
+          "lat": 31.661376215000075,
+          "lon": -7.990236301999914
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 643,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.990252063999947,
+              31.66177679000009
+            ],
+            "type": "Point"
+          },
+          "lat": 31.66177679000009,
+          "lon": -7.990252063999947
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 644,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.990433194999923,
+              31.66181104000009
+            ],
+            "type": "Point"
+          },
+          "lat": 31.66181104000009,
+          "lon": -7.990433194999923
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 645,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.990423265999937,
+              31.661914307000075
+            ],
+            "type": "Point"
+          },
+          "lat": 31.661914307000075,
+          "lon": -7.990423265999937
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 646,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.999162244999923,
+              31.67064081400008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.67064081400008,
+          "lon": -7.999162244999923
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 647,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.99910381199993,
+              31.67081375500004
+            ],
+            "type": "Point"
+          },
+          "lat": 31.67081375500004,
+          "lon": -7.99910381199993
+        },
+        {
+          "ConfidenceID": 2.0,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 4,
+          "Notes": null,
+          "OBJECTID": 648,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": "Marrakesh",
+          "SiteID": 26,
+          "StaffID": 77.0,
+          "geometry": {
+            "coordinates": [
+              -7.999019228999941,
+              31.670977923000066
+            ],
+            "type": "Point"
+          },
+          "lat": 31.670977923000066,
+          "lon": -7.999019228999941
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 649,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.02587550499993,
+              31.65167935800008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.65167935800008,
+          "lon": -8.02587550499993
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 650,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.025689117999946,
+              31.65170466400008
+            ],
+            "type": "Point"
+          },
+          "lat": 31.65170466400008,
+          "lon": -8.025689117999946
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 651,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.025513343999933,
+              31.651627275000067
+            ],
+            "type": "Point"
+          },
+          "lat": 31.651627275000067,
+          "lon": -8.025513343999933
+        },
+        {
+          "ConfidenceID": null,
+          "EventCode": "EQ20230909MAR",
+          "FieldValidation": 0,
+          "Grouped_Damage_Classes": 1,
+          "ImageID_Num": null,
+          "Main_Damage_Site_Class": 13,
+          "Notes": null,
+          "OBJECTID": 652,
+          "SensorDate": {},
+          "SensorID": 35,
+          "Settlement_Name": null,
+          "SiteID": 26,
+          "StaffID": null,
+          "geometry": {
+            "coordinates": [
+              -8.025499766999928,
+              31.651554644000043
+            ],
+            "type": "Point"
+          },
+          "lat": 31.651554644000043,
+          "lon": -8.025499766999928
+        }
+      ],
+      "getFillColor": "@@=[200, 30, 0, 160]",
+      "getPosition": "@@=[lon, lat]",
+      "getRadius": 100,
+      "id": "d1633882-cd92-415d-aa97-32650def240f",
+      "pickable": true
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = {'html': '<b>Data:</b> {attribute_name}', 'style': {'color': 'white'}};
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

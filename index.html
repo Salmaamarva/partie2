@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoSpatial Formats Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Visualisation des formats Cloud</h1>
+    </header>
+
+    <main>
+        <!-- Introductory Text -->
+        <div id="intro-text">
+            <p>
+                Bienvenue sur notre platform Web . Explorer les differents formats de données géospatiales, notamment GeoJSON, GeoParquet, COG, and Zarr. Découvrir comment ces formats sont visualiser et utilisé pour des cartes.
+            </p>
+        </div>
+        <section id="intro">
+            <div class="oval-button" onclick="showCOGMap()">COG</div>
+            <div class="oval-button" onclick="showGeoJsonMap()">GEOJSON</div>
+            <div class="oval-button" onclick="showGeoParquetMap()">GEOPARQUET</div>
+            <div class="oval-button" onclick="showDemo('zarr')">ZARR</div>
+        </section>
+<button class="stat-button" onclick="showStats()">STATISTIQUES</button>
+        <section id="demo">
+            <div id="demo-text">
+                <p id="format-description"></p>
+            </div>
+            <div id="map-container">
+                <div id="map"></div>
+                <div id="map-secondary" style="display: none; width: 100%; height: 500px; border: 2px solid #4a3b3b; border-radius: 10px; margin-top: 30px;"></div>
+            </div>            
+            <button class="back-button" onclick="goBack()">Retour</button>
+        </section>
+        <section id="comparison">
+            <h2>Comparaison des Formats de Webmapping</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Format</th>
+                        <th>Description</th>
+                        <th>Avantages</th>
+                        <th>Taille de Fichier </th>
+                    </tr>
+                </thead>
+                <tbody id="comparison-table-body"></tbody>
+            </table>
+            <canvas id="comparison-chart" width="800" height="200"></canvas>
+            <button class="back-button" onclick="goBack()">Retour</button>
+        </section>
+        <footer>
+            <p>
+                Réalisé dans le cadre du cours Webmapping par  <a href="#">Le groupe 3</a>
+            </p>
+        </footer>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/proj4"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
