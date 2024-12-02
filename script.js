@@ -6,7 +6,7 @@ const formatInfo = {
             "Idéal pour les grands ensembles de données raster",
             "Largement pris en charge dans les outils SIG"
         ],
-        storageSize: 323'MB'
+        storageSize: 323
     },
     geojson: {
         description: "GEOJSON est un format basé sur JSON pour encoder des structures de données géographiques, compatible avec des bibliothèques de cartographie comme Leaflet et Esri.",
@@ -15,7 +15,7 @@ const formatInfo = {
             "Compatible avec divers outils SIG et cartographiques",
             "Idéal pour les petits et moyens ensembles de données"
         ],
-        storageSize: 142'KB'
+        storageSize: 142
     },
     geoparquet: {
         description: "GEOPARQUET est un format qui combine le stockage colonnaire Parquet avec des données spatiales, idéal pour de grands ensembles de données et un traitement de requêtes efficace.",
@@ -24,7 +24,7 @@ const formatInfo = {
             "Stockage colonnaire pour un traitement efficace",
             "Prend en charge des types de données spatiales complexes"
         ],
-        storageSize: 25'KB'
+        storageSize: 25
     },
     zarr: {
         description: "ZARR est un format pour des tableaux N-dimensionnels, découpés et compressés, adapté aux grandes données multidimensionnelles dans le stockage en cloud.",
@@ -33,7 +33,7 @@ const formatInfo = {
             "Prend en charge le stockage cloud",
             "Idéal pour les données scientifiques et environnementales"
         ],
-        storageSize: 1'GB'
+        storageSize: 1
     }
 };
 function hideAllMaps() {
