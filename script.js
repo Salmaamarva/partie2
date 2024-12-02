@@ -178,7 +178,7 @@ function showStats() {
         row.appendChild(benefitsCell);
 
         const storageCell = document.createElement("td");
-        storageCell.textContent = `${data.storageSize} KB`;
+        storageCell.textContent = `${data.storageSize} `;
         row.appendChild(storageCell);
 
         comparisonBody.appendChild(row);
