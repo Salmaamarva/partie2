@@ -177,6 +177,10 @@ function showStats() {
         benefitsCell.textContent = data.benefits.join(", ");
         row.appendChild(benefitsCell);
         
+        const storageCell = document.createElement("td");
+        storageCell.textContent = `${data.storageSize} `;
+        row.appendChild(storageCell);
+        
         comparisonBody.appendChild(row);
     });
 
