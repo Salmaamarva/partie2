@@ -33,7 +33,7 @@ const formatInfo = {
             "Prend en charge le stockage cloud",
             "Idéal pour les données scientifiques et environnementales"
         ],
-        storageSize: 10
+        storageSize: 1'GB'
     }
 };
 function hideAllMaps() {
