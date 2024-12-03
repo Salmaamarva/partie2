@@ -41,7 +41,7 @@ main {
     font-size: 1.6rem; /* Slightly larger font size */
     text-align: center;
     color: #333; /* A softer, deeper color for better readability */
-    background-color: #f1f1f1; /* A subtle, light gray background */
+    background-color: transparent; /* Transparent background */
     padding: 25px 40px; /* More padding for spaciousness */
     border-radius: 20px; /* Softer rounded corners */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* A more subtle, elegant shadow */
