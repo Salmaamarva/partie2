@@ -150,7 +150,7 @@ function showDemo() {
     document.getElementById('comparison').style.display = 'none';
 
     const mapContainer = document.getElementById('map');
-    mapContainer.innerHTML = '<iframe src="carte_temperature.html" width="100%" height="500px" frameborder="0"></iframe>';
+    mapContainer.innerHTML = '<iframe src="carte_temperature_maroc_interactive_2015_2025_Celsius (1).html" width="100%" height="500px" frameborder="0"></iframe>';
 
     // Update the format description
     document.getElementById('format-description').innerText = 'Visualisation du fichier Zarr.';
